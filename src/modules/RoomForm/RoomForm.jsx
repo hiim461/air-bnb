@@ -48,7 +48,6 @@ function RoomForm({ onShow, handleShow, onUpdateRoom, onHandleUploaded }) {
   const handleShow2 = (value) => {
     setShow(value);
   };
-  //
 
   const {
     register,

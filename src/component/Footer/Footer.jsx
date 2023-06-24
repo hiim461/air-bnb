@@ -54,7 +54,7 @@ function Footer() {
           </div>
         </div>
         <div className='row loiDan'>
-          <div className='col-sm-6 thongTin'>
+          <div className='col-sm-6 thongTin mb-3'>
             <span>© 2023 Airbnb, Inc.</span>
             <span>
               <ul className='baoMat'>
@@ -67,7 +67,7 @@ function Footer() {
               </ul>
             </span>
           </div>
-          <div className='col-sm-4 mangXaHoi'>
+          <div className='col-sm-4 mangXaHoi mb-3'>
             <span><a href="#" className='tiengViet'><i className="bi bi-globe mx-2"></i>Tiếng Việt (VN)</a></span>
             <span className='mx-2'>₫</span>
             <span className='tiengViet me-2'>VND</span>

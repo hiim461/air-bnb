@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import AdminSidebar from "../../modules/Admin/AdminSidebar/AdminSidebar";
 import { Outlet } from "react-router-dom";
-import AdminHeader from "../../modules/Admin/AdminHeader/AdminHeader";
 import "./AdminLayout.scss";
 
 function AdminLayout() {
@@ -22,8 +21,7 @@ function AdminLayout() {
             )}
             {toggle && <Col className="col-4 col-md-2"></Col>}
             <Col className="px-3">
-              <AdminHeader />
-              <AdminHeader  />
+           
               <div className="mt-2">
                 <Outlet  />
               </div>
@@ -31,12 +29,9 @@ function AdminLayout() {
           </Row>
         </Container>
       </div>
-
       <div className="divvvvvvv1">
         <Container fluid className="bg-bg-secondary min-vh-100">
-          <AdminHeader toggle={toggle} Toggle={Toggle} />
           <AdminSidebar />
-
           <Outlet Toggle={Toggle} />
         </Container>
       </div>

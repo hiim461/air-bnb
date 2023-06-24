@@ -12,7 +12,6 @@ function UserBookingList() {
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(false);
   const [bookingList, setBookingList] = useState(null);
   const deleteBooking = useRef(null);
   const { user } = useSelector((state) => state.user);

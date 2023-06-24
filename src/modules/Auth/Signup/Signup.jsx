@@ -199,7 +199,13 @@ function Signup() {
               )}
             </div>
             <div className="d-grid">
-              <button className="btn nut" disabled={isLoading ? true : false}>Đăng kí</button>
+              <button
+                  type="submit"
+                  className={`nut w-100`}
+                  disabled={isLoading ? true : false}
+                >
+                  Đăng ký
+              </button>            
             </div>
             <p className="text-end mt-2">
               <a onClick={() => handleLoginRedirect()}

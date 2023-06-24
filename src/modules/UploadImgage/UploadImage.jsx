@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
-import { useDispatch, useSelector } from "react-redux";
 import style from "./UploadImage.module.scss";
 import { apiUploadRoomImg } from "../../apis/roomManagementAPI";
 import { apiUploadDescImg } from "../../apis/descManagementAPI";

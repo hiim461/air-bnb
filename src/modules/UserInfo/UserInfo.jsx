@@ -64,7 +64,6 @@ function UserInfo() {
   useEffect(() => {
     reset({
       id: infoUser.id,
-      // password: infoUser?.password,
       name: infoUser?.name,
       email: infoUser?.email,
       phone: infoUser?.phone,

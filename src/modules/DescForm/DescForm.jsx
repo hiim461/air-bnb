@@ -18,7 +18,6 @@ const schema = yup.object({
 
 function DescForm({ onShow, handleShow, onUpdateDesc }) {
   const dispatch = useDispatch();
-  //upload
   const [show, setShow] = useState(false);
   const [key, setKey] = useState(null);
   const [id2, setId2] = useState(null);
@@ -34,7 +33,7 @@ function DescForm({ onShow, handleShow, onUpdateDesc }) {
   const handleShow2 = (value) => {
     setShow(value);
   };
-  //
+
   const {
     register,
     handleSubmit,

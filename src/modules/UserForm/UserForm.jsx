@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -18,13 +17,6 @@ const schema = yup.object({
       /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
       "(*)Email không đúng định dạng"
     ),
-  // password: yup
-  //   .string()
-  //   .required("(*)Mật khẩu không được để trống")
-  //   .matches(
-  //     /^(?=.*[a-z])(?=.*[A-Z]).{8,}$/,
-  //     "(*)Mật khẩu phải có ít nhất 8 kí tự, phải có 1 chữ hoa, 1 chữ thường và 1 số"
-  //   ),
   name: yup.string().required("(*)Họ tên không được để trống"),
   phone: yup
     .string()
@@ -38,11 +30,10 @@ const schema = yup.object({
 });
 
 function UserForm({ onShow, handleShow, onUpdateUser }) {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const { user: userPre } = useSelector((state) => state.user);
 
-  //upload
+
   const [show, setShow] = useState(false);
   const [key, setKey] = useState(null);
   const [id2, setId2] = useState(null);
@@ -58,7 +49,7 @@ function UserForm({ onShow, handleShow, onUpdateUser }) {
   const handleShow2 = (value) => {
     setShow(value);
   };
-  //
+
   const [passShow, setPassShow] = useState(false);
   const {
     register,
@@ -88,7 +79,6 @@ function UserForm({ onShow, handleShow, onUpdateUser }) {
     setValue("avatar", hinhAnh);
   };
 
-  // const { infoUser, isLoading, error } = useSelector((state) => state.infoUser);
   const { updated, user, error, isLoading } = useSelector(
     (state) => state.updateUser
   );

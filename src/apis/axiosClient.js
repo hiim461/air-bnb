@@ -27,14 +27,12 @@ axiosClient.interceptors.response.use(
     if (error?.response?.status === 403) {
      
       // khác navigate của react-router-dom là sẽ reload trình duyệt mất luôn state của redux
-      // window.lo.replaceState(null, "/signin")
       swal({
         title: "Không có quyền thay đổi",
         text: "Nhấn Ok để tiếp tục",
         icon: "error",
       }).then((willSuccess) => {
         if (willSuccess) {
-        //   window.location.href = "/signin";
         }
       });
     }

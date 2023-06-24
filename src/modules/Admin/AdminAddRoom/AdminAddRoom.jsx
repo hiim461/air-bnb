@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Container } from "react-bootstrap";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -67,7 +67,6 @@ function AdminAddRoom() {
   });
   const { room, isLoading, error } = useSelector((state) => state.createRoom);
   const [addRoom, setAddRoom] = useState(null);
-  const [issloading, setIssLoading] = useState(null);
   const onSubmit = async (value) => {
     const data = await dispatch(adminCreateRoom(value));
     setAddRoom(data);
@@ -99,19 +98,6 @@ function AdminAddRoom() {
       <Container>
         <h2 className="tieuDePT">Thêm phòng thuê mới</h2>
         <form className="mt-3" onSubmit={handleSubmit(onSubmit, onError)}>
-            {/* <div>
-              <input
-                    type="text"
-                    className="w-100 form-control"
-                    {...register("id")}
-                    placeholder="ID"
-                  />
-                  {errors.id && (
-                    <p className="ms-3 fs-7 text-danger fst-italic">
-                      {errors.id.message}
-                    </p>
-                  )}
-            </div> */}
             <div className="mt-2">
               <input
                     type="text"

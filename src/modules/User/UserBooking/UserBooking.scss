@@ -22,3 +22,15 @@
     }
   }
 }
+
+.add{
+  border: 1px solid green;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background-color: white;
+  color: green;
+  &:hover{
+    box-shadow: 0 0 10px 0 green;
+    transition: 0.3s;
+  }
+}

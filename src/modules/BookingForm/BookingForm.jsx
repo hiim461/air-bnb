@@ -178,7 +178,6 @@ function BookingForm({ onShow, handleShow, onUpdateBooking }) {
             <DatePicker
               showIcon
               selected={newStartDate}
-              // minDate={startDate}
               dateFormat="dd/MM/yyyy"
               onChange={(date) => setNewStartDate(date)}
               className="datePicker"

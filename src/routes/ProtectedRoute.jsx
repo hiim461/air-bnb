@@ -8,7 +8,6 @@ function ProtectedRoute({ children }) {
   const { pathname } = useLocation();
   const navigate = useNavigate();
   if (!user) {
-    // return <Navigate to={`/signin?redireactUrl=${pathname}`} patch replace/>
     swal({
       title: "Bạn chưa đăng nhập!",
       text: "Nhấn Ok để tiếp tục!",

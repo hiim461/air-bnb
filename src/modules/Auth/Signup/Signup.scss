@@ -33,6 +33,8 @@
 
 .nut{
   @extend .btnPrimary;
-  transition: box-shadow 0.2s ease;
-
+  &:hover, &:active{
+    background-color: rgb(241, 40, 91);
+    color: #fafafa;
+  }
 }
